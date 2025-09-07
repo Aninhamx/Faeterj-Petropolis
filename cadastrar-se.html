@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastrar-se | FAETERJ</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+</head>
+<body class="min-h-screen bg-gray-50 flex">
+
+  <!-- Lado Esquerdo -->
+  <div class="hidden lg:flex lg:w-1/2 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 relative overflow-hidden">
+    <div class="absolute top-10 right-10 w-32 h-32 bg-blue-600/30 rounded-full blur-xl"></div>
+    <div class="absolute bottom-20 left-10 w-48 h-48 bg-blue-500/20 rounded-full blur-2xl"></div>
+    <div class="absolute top-1/2 left-1/4 w-24 h-24 bg-blue-400/25 rounded-full blur-lg"></div>
+
+    <div class="flex flex-col justify-center items-center w-full px-12 relative z-10 text-center text-white">
+      <div class="mb-8">
+        <div class="w-20 h-20 bg-blue-500 rounded-2xl flex items-center justify-center mb-4 shadow-2xl">
+          <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center">
+            <div class="w-8 h-8 bg-blue-600 rounded-lg"></div>
+          </div>
+        </div>
+      </div>
+      <h1 class="text-4xl font-bold mb-4">Bem-vindo de volta</h1>
+      <p class="text-blue-100 text-lg max-w-md">Acesse sua conta e continue sua jornada conosco</p>
+    </div>
+  </div>
+
+  <!-- Lado Direito -->
+  <div class="w-full lg:w-1/2 flex items-center justify-center p-8 relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-64 h-64 bg-blue-100/50 rounded-full blur-3xl -translate-y-32 translate-x-32"></div>
+    <div class="absolute bottom-0 left-0 w-48 h-48 bg-blue-50/80 rounded-full blur-2xl translate-y-24 -translate-x-24"></div>
+
+    <div class="bg-white w-full max-w-md p-8 shadow-2xl rounded-2xl relative z-10">
+      <div class="flex justify-center mb-6">
+        <div class="w-16 h-16 bg-gray-900 rounded-full flex items-center justify-center">
+          <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5.121 17.804A9 9 0 1112 21a9 9 0 01-6.879-3.196z" />
+          </svg>
+        </div>
+      </div>
+
+      <div class="text-center mb-8">
+        <h2 id="form-title" class="text-2xl font-bold text-blue-600 mb-2">Log In</h2>
+        <p id="form-subtitle" class="text-gray-600">Entre com suas credenciais</p>
+      </div>
+
+      <!-- Formulário -->
+      <form id="auth-form" class="space-y-4">
+        <div id="name-field" class="relative hidden">
+          <input type="text" placeholder="NOME" class="pl-12 h-12 w-full border-2 border-gray-200 rounded-xl focus:border-blue-500 transition-colors">
+          <svg class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5.121 17.804A9 9 0 1112 21a9 9 0 01-6.879-3.196z" />
+          </svg>
+        </div>
+
+        <div class="relative">
+          <input type="email" placeholder="EMAIL" required class="pl-12 h-12 w-full border-2 border-gray-200 rounded-xl focus:border-blue-500 transition-colors">
+          <svg class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M16 12H8m8 0a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+        </div>
+
+        <div class="relative">
+          <input type="password" placeholder="SENHA" required class="pl-12 h-12 w-full border-2 border-gray-200 rounded-xl focus:border-blue-500 transition-colors">
+          <svg class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 11c.667 0 2-.333 2-2s-1.333-2-2-2-2 .333-2 2 .333 2 2 2z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 13v6m6-6v6m-12-6v6" />
+          </svg>
+        </div>
+
+        <button type="submit" id="submit-btn" class="w-full h-12 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-colors shadow-lg">
+          ENTRAR
+        </button>
+      </form>
+
+      <!-- Divisor -->
+      <div class="flex items-center my-6">
+        <div class="flex-1 h-px bg-gray-300"></div>
+        <span class="px-3 text-sm text-gray-500">ou continue com</span>
+        <div class="flex-1 h-px bg-gray-300"></div>
+      </div>
+
+     <!-- Botões Sociais -->
+<div class="flex justify-center space-x-4 my-6">
+  <!-- Google -->
+  <a href="#" class="w-12 h-12 flex items-center justify-center rounded-full border shadow-sm hover:bg-gray-50 transition">
+    <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google" class="w-6 h-6">
+  </a>
+
+  <!-- Facebook -->
+  <a href="#" class="w-12 h-12 flex items-center justify-center rounded-full border shadow-sm hover:bg-gray-50 transition">
+    <img src="https://www.svgrepo.com/show/475647/facebook-color.svg" alt="Facebook" class="w-6 h-6">
+  </a>
+
+  <!-- GitHub -->
+  <a href="#" class="w-12 h-12 flex items-center justify-center rounded-full border shadow-sm hover:bg-gray-50 transition">
+    <img src="https://www.svgrepo.com/show/512317/github-142.svg" alt="GitHub" class="w-6 h-6">
+  </a>
+</div>
+
+
+      <!-- Links Extras -->
+      <div class="text-center mt-6">
+        <p class="text-gray-600">
+          <span id="toggle-text">Não tem uma conta?</span>
+          <button id="toggle-btn" type="button" class="ml-2 text-blue-600 font-semibold hover:text-blue-700 transition-colors">
+            Criar conta
+          </button>
+        </p>
+      </div>
+
+      <div id="forgot-password" class="text-center mt-4">
+        <button type="button" class="text-sm text-gray-500 hover:text-gray-700 transition-colors">
+          Esqueceu sua senha?
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const toggleBtn = document.getElementById("toggle-btn");
+    const nameField = document.getElementById("name-field");
+    const title = document.getElementById("form-title");
+    const subtitle = document.getElementById("form-subtitle");
+    const submitBtn = document.getElementById("submit-btn");
+    const toggleText = document.getElementById("toggle-text");
+    const forgotPassword = document.getElementById("forgot-password");
+
+    let isLogin = true;
+
+    toggleBtn.addEventListener("click", () => {
+      isLogin = !isLogin;
+      if (isLogin) {
+        nameField.classList.add("hidden");
+        title.textContent = "Log In";
+        subtitle.textContent = "Entre com suas credenciais";
+        submitBtn.textContent = "ENTRAR";
+        toggleText.textContent = "Não tem uma conta?";
+        toggleBtn.textContent = "Criar conta";
+        forgotPassword.classList.remove("hidden");
+      } else {
+        nameField.classList.remove("hidden");
+        title.textContent = "Criar Conta";
+        subtitle.textContent = "Crie sua conta para começar";
+        submitBtn.textContent = "CRIAR CONTA";
+        toggleText.textContent = "Já tem uma conta?";
+        toggleBtn.textContent = "Fazer login";
+        forgotPassword.classList.add("hidden");
+      }
+    });
+  </script>
+</body>
+</html>
